@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Text, TextInput, View } from 'react-native';
 
-export default function App() {
+ function MyApp() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <View>
+      <Text>
+        Hello, I am a CIS340 student! 
+        </Text>
+        </View>
+
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function MultiComp() {
+  return (
+    <View style ={{
+flex: 1,
+justifyContent: 'Center',
+alignItems: 'center'
+    }}>
+<Text> Welcome to My Class</Text>
+<MyApp />
+<MyApp />
+<MyApp />
+<MyApp />
+    </View>
+  ) 
+}
