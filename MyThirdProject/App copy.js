@@ -1,15 +1,30 @@
 import React from 'react';
-import { Text, Image, View } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 
-export default function MyDog() {
+function Student(props) {
   return (
     <View>
-      <Image source = "https://github.com/CameronQuade/CIS340/commit/208808a58375e78ae4e25d1cb4c8b8c31da3ac98#commitcomment-71324676" 
-   style = {{idth: 200, height: 200}}
-   />
-   <Text>Hello, this is my dog</Text>
+      <Text>Hey, My name is {props.name}, I am a student in CIS340!</Text>
     </View>
   );
+}
+
+export default function MultiComp() {
+  return (
+  <View style ={{
+  flex: 1,
+  justifyContent: 'Center',
+  alignItems: 'center'
+    }}>
+
+      <Text> Welcome to CIS340 </Text>
+      <Student name = "Cameron Quade"/>
+      <Student name = "Ramadan Abdunabi"/>
+      <Student name = "LeBron James" />
+      <Student name = "Jimmy Jam"/>
+    </View>
+  )
+
 }
 
 
